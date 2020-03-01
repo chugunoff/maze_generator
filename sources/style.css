@@ -1,0 +1,50 @@
+html, body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+.auth {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #495057;
+	border: 1px solid #495057;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	height: 40%;
+	max-width: 25%;
+	max-height: 40%;
+}
+
+.auth input {
+	min-width: 75%;
+	height: 25%;
+}
+
+.auth-text {
+	width: 100%;
+	text-align: center;
+}
+
+form.auth {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 100%;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}

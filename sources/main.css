@@ -1,0 +1,92 @@
+#maze {
+  border-style: solid;
+}
+
+.block {
+  background-color: white;
+  background-size: cover;
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+.wall {
+  background-color: black;
+  background-size: cover;
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+.gray-brick {
+  background-image: url("images/Gray_Brick.png");
+}
+
+.gray-brick-wall {
+  background-image: url("images/Gray_Brick_Wall.png");
+}
+
+.sand-block {
+  background-image: url("images/Sand_Block.png");
+}
+
+.yellow_stucco_wall {
+  background-image: url(images/Yellow_Stucco_Wall.png);
+}
+
+
+.me {
+  position: relative;
+}
+
+.me:after {
+  background-color: #23afee;
+  border-radius: 100%;
+  content: '';
+  height: 20px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.foot{
+  position: relative;
+}
+
+.foot:after {
+  background-color: green;
+  content: '';
+  height: 20px;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.finish {
+  background-color: #f31d1d;
+  background-size: cover;
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+#complete {
+  display: none;
+  height: 360px;
+  left: 20%;
+  position: absolute;
+  right: 20%;
+  top: 50px;
+  width: 640px;
+  z-index: 1000;
+}
+
+#complete img {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  background-color: #444;
+  
+}

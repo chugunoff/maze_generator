@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='../public/stylesheets/login.css'/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="auth">
+    <div class="auth-text">Авторизация</div>
+    <form class="auth-form">
+        <input name="username" type="text" id="inputLogin" placeholder="Логин...">
+
+        <input name="password" type="text" id="inputPassword" placeholder="Пароль...">
+
+        <!--<input type="text" id="inputPassword2" placeholder="Повторить пароль...">-->
+
+        <input type = "submit" data-loading-text="Проверка..." value = "Войти">
+    </form>
+</div>
+<script src="/javascripts/listener.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+html {
+    font-size: 16px;
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    /*color: rgba(73, 80, 87, 1);*/
+    color: rgba(0, 0, 0, 0.87);
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+header {
+    background: #ffffff;
+    color: rgba(73, 80, 87, 0.6);
+    height: 8%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+.username {
+    margin: auto 0.5rem;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-maze {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.container-side {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.container-center {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+main button {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    height: 30px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn-link {
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.btn-header {
+    background: transparent;
+    opacity: .6;
+}
+
+.btn-header:hover {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    opacity: 1;
+}
+
+#maze {
+    /*border-style: solid;*/
+}
+
+.block {
+    background-size: cover;
+    float: left;
+    height: 25px;
+    width: 25px;
+}
+
+.wall {
+    background-size: cover;
+    float: left;
+    height: 25px;
+    width: 25px;
+}
+
+.label {
+    position: absolute;
+    font-size: 12px;
+    color: white;
+    z-index: 2;
+}
+
+.invisible {
+    display: none;
+}
+
+.foot {
+    position: relative;
+}
+
+.foot:after {
+    background-color: green;
+    content: '';
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.blue {
+    position: relative;
+}
+
+.blue:after {
+    background-color: deepskyblue;
+    content: '';
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.me {
+    position: relative;
+}
+
+.me:after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    max-width: 25px;
+    width: 25px;
+}
+
+.start {
+    background-size: cover;
+    float: left;
+    height: 25px;
+    width: 25px;
+}
+
+.finish {
+    background-image: url("/images/Exit.jpg");
+    background-size: cover;
+    float: left;
+    height: 25px;
+    width: 25px;
+}
+
+#complete {
+    display: none;
+    height: 360px;
+    left: 20%;
+    position: absolute;
+    right: 20%;
+    top: 50px;
+    width: 640px;
+    z-index: 1000;
+}
+
+#complete img {
+    height: 100%;
+    width: 100%;
+}
+
+select {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+}
+
+option {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+}
+
+.dashed {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px dashed rgba(73, 80, 87, .6);
+}
+
+.dashed * {
+    margin: .5rem 0;
+}
+
+.dashed *:first-child {
+    margin-top: 0;
+}
+
+.dashed *:last-child {
+    margin-bottom: 0;
+}
+
+.dashed-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-top: 1px dashed rgba(73, 80, 87, .6);
+    border-left: 1px dashed rgba(73, 80, 87, .6);
+    border-right: 1px dashed rgba(73, 80, 87, .6);
+}
+
+.b-popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+}
+
+.b-popup .b-popup-content {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 20%;
+    height: 20%;
+    padding: 10px;
+    background-color: #c5c5c5;
+    box-shadow: 0 0 10px #000;
+}
+
+.b-popup .about {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 35%;
+    height: 35%;
+    padding: 10px;
+    background-color: #c5c5c5;
+    box-shadow: 0 0 10px #000;
+}
+
+.b-popup .about .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-bottom: 1px dashed rgba(73, 80, 87, .6);
+}
+
+.b-popup-load {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+}
+
+.b-popup-load .b-popup-labs {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    height: 60%;
+    padding: 10px;
+    background-color: #c5c5c5;
+    box-shadow: 0 0 10px #000;
+}
+
+.rowLabHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px dashed rgba(73, 80, 87, .6);
+}
+
+.rowLab {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed rgba(73, 80, 87, .6);
+    cursor: pointer;
+}
+
+.rowLab:hover {
+    outline: 1px solid lightseagreen;
+}
+
+.name {
+    border-right: 1px dashed rgba(73, 80, 87, .6);
+    text-align: center;
+    min-width: 33.33%;
+}
+
+.theme {
+    border-right: 1px dashed rgba(73, 80, 87, .6);
+    text-align: center;
+    min-width: 33.33%;
+}
+
+.size {
+    text-align: center;
+    min-width: 33.33%;
+}

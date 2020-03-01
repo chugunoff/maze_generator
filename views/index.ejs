@@ -1,0 +1,130 @@
+<html>
+<head>
+    <link rel="stylesheet" href='/stylesheets/main.css'>
+    <link id="theme" rel="stylesheet" href='/stylesheets/themes/theme_stone.css'>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <button id="btn-about" class="btn btn-link btn-header" type="button"><i class="fas fa-question fa-2x"></i></button>
+        <div class="username"><%= user.get('username') %></div><button id="logout" class="btn btn-link btn-header" type="button"><i class="fas fa-sign-out-alt fa-2x"></i></button>
+    </header>
+    <main>
+        <div class="container-maze">
+            <div class="container-side">
+                <div class="dashed-title">
+                    Maze
+                </div>
+                <div class="dashed">
+                    <label id="label-width" for="width">Width: 5</label>
+                    <input id="width" type="range" min="5" max="15" step="2" value="5">
+
+                    <label id="label-height" for="height">Height: 5</label>
+                    <input id="height" type="range" min="5" max="15" step="2" value="5">
+
+                    <button id="btn-gen" class="btn" type="button">Generate</button>
+                </div>
+
+                <div class="dashed-title">
+                    Enter/Exit
+                </div>
+                <div class="dashed">
+                    <button id="btn-auto" type="button">Auto</button>
+                    <!--<button id="btn-manual" type="button">Manual</button>-->
+                    <button id="btn-manual-apply" type="button">Manual Apply</button>
+
+                </div>
+            </div>
+
+            <div class="container-center">
+                <div id='maze'></div>
+                <div id='complete'>
+                    MISSION ACCOMPLISHED
+                </div>
+            </div>
+
+            <div class="container-side">
+                <div class="dashed-title">
+                    Theme
+                </div>
+                <div class="dashed">
+                    <select id="select-themes" autocomplete="off">
+                        <option selected value="Stone">Stone</option>
+                        <option value="Sand">Sand</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Dirt">Dirt</option>
+                    </select>
+                </div>
+                <div class="dashed-title">
+                    OneHand
+                </div>
+                <div id="aOneHand" class="dashed">
+                    <label id="label-OH-Time" for="OH-Interval"></label>
+                    <input id="OH-Interval" type="range" min="100" max="1000" step="100" value="100">
+
+                    <button id="btn-aOneHand-Dynamic-Time" type="button">Dynamic Time</button>
+
+                    <button id="btn-aOneHand-Static" type="button">Static</button>
+                </div>
+
+                <div class="dashed-title">
+                    Trace
+                </div>
+                <div class="dashed">
+                    <label id="label-Trace-Timeout" for="Trace-Timeout"></label>
+                    <input id="Trace-Timeout" type="range" min="100" max="1000" step="100" value="100">
+
+                    <button id="btn-aTrace-Timeout" type="button">Dynamic Time</button>
+                    <button id="btn-aTrace-Static" type="button">Static</button>
+                </div>
+            </div>
+        </div>
+        <div style = "text-align: center;">
+            <button id="btn-save" type="button">save</button>
+            <button id="btn-load" type="button">load</button>
+        </div>
+
+        <script src='/javascripts/game.js' type="text/javascript"></script>
+        <script src='/javascripts/listener.js' type="text/javascript"></script>
+        <script src='/javascripts/aTrace.js' type="text/javascript"></script>
+        <script src='/javascripts/aOneHand.js' type="text/javascript"></script>
+
+        <script src="/javascripts/mazeGenerator.js" type="text/javascript"></script>
+
+
+    </main>
+    <div class="b-popup">
+        <div class="b-popup-content">
+            <span>Name</span>
+            <input id="labName" type="text">
+            <button id="btn-save-apply" type="button">Save</button>
+            <button id="btn-cancel-save" type="button">Cancel</button>
+        </div>
+        <div class="about">
+            <div class="about-title">Справка</div>
+            <p>Система генерирования структуры лабиринта и нахождение выхода из него</p>
+            <p>Для генерирования структуры лабиринта необходимо:</p>
+            <ol>
+                <li>Выбрать ширину и высоту лабиринта в блоке "Maze" и нажать кнопку "Generate".</li>
+                <li>Выбрать способ расстановки входа и выхода в блоке "Enter/Exit".</li>
+                <li>Выбрать тему лабиринта в блоке "Theme".</li>
+                <li>Выбрать один из алгоритмов нахождения пути и способов визуализации работы алгоритма.</li>
+            </ol>
+            <p>Для сохранения и загрузки лабиринта используются кнопки "Save" и "Load".</p>
+            <button id="btn-in-about-ok" type="button">OK</button>
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

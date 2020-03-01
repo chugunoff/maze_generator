@@ -1,0 +1,9 @@
+.wall {
+    background-image: url("/images/Gray_Brick.png");
+}
+.block, .start {
+    background-image: url("/images/Gray_Brick_Wall.png");
+}
+.me:after {
+    background-image: url("/images/Tim.png");
+}

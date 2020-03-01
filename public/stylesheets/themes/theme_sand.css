@@ -1,0 +1,9 @@
+.wall {
+    background-image: url("/images/Sand_Block.png");
+}
+.block, .start {
+    background-image: url("/images/Yellow_Stucco_Wall.png");
+}
+.me:after {
+    background-image: url("/images/Mummy.png");;
+}
